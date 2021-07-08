@@ -41,6 +41,7 @@ deq.insert(it,20);
 for(const auto& el:deq)
     std::cout<<el<<'\n';
 std::cout<<'\n';
+std::cout<<"size: "<<deq.size()<<'\n';
 
     return 0;
 }
