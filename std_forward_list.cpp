@@ -18,8 +18,8 @@ int main()  {
     l.push_front(10);
 
     auto it_prev =l.begin();
-    while(it!=l.end()) it_prev=it++;
-    //std::cout<<*it_prev<<'\n';
+    while(it!=l.end()) it_prev=it++;        //wyszukiwanie przedostatniego elementu
+   
     l.emplace_after(it_prev,10);
  
     for(auto& el:l) std::cout<<el<<' ';
@@ -36,4 +36,7 @@ int main()  {
     
     for(auto& el:a)   std::cout << el << ' ';
     std::cout << '\n';
+
+    return 0;
+    
 }
