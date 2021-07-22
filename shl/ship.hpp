@@ -11,14 +11,15 @@ class Ship  {
             :Ship(id,"",speed,maxCrew,0)
             {}
         void setName(std::string name);
+        Ship& operator +=(const int);
+        Ship& operator -=(const int);
+    
     private:
         uint32_t id_;
         std::string name_;
         int speed_;
         int maxCrew_;
         float capacity_;
-};
+        size_t crew_;
 
-void Ship::setName(std::string name)  {
-            name_ = name;
-        }
+};
