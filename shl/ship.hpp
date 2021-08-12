@@ -1,5 +1,9 @@
 #include<string>
-#include<cstdint>
+//#include<cstdint>
+#include<vector>
+#include<memory>
+#include"cargo.hpp"
+
 
 class Ship  {
     public:
@@ -13,6 +17,7 @@ class Ship  {
         void setName(std::string name);
         Ship& operator +=(const int);
         Ship& operator -=(const int);
+        void load(std::shared_ptr<Cargo>);
     
     private:
         uint32_t id_;
@@ -21,5 +26,6 @@ class Ship  {
         int maxCrew_;
         float capacity_;
         size_t crew_;
+        std::vector<std::shared_ptr<Cargo>> freight_;
 
 };
