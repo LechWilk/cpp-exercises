@@ -18,7 +18,7 @@ class Ship  {
         Ship& operator +=(const int);
         Ship& operator -=(const int);
         void load(std::shared_ptr<Cargo>);
-    
+        void Ship::unload(Cargo* cargo);
     private:
         uint32_t id_;
         std::string name_;
