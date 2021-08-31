@@ -6,9 +6,23 @@ class Fruit : public Cargo  {
         Fruit(int amount, std::string name, float basePrice, int timeToSpoil)
         :   Cargo(amount, name, basePrice), timeToSpoil_(timeToSpoil)
         {}
-        Fruit& operator--();
-        virtual size_t getPrice() const = 0;
-    private:
+        virtual Fruit& operator--();
+        virtual size_t getPrice() const override;
+    protected:
         int timeToSpoil_;
+
+};
+
+class DryFruit : public Fruit{
+    public:
+   public:
+        DryFruit(int amount, std::string name, float basePrice, int timeToSpoil)
+        :   Fruit(amount, name, basePrice, timeToSpoil), daysTenthsToSpoil_(0)
+        {}
+
+        size_t getPrice() const override;
+        DryFruit& operator--();
+    protected:
+        int daysTenthsToSpoil_;
 
 };
