@@ -14,7 +14,7 @@ class Cargo {
 
         Cargo& operator+=(const size_t);
         Cargo& operator-=(const size_t);
-    //private:
+    private:
         std::string name_;
         int amount_;
         float basePrice_;
