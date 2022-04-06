@@ -5,6 +5,9 @@
 void Ship::setName(std::string name)  {
             name_ = name;
         }
+std::string Ship::getName()  {
+    return name_;
+}
 
 Ship& Ship::operator +=(const int teamates)  {
     crew_+=teamates;

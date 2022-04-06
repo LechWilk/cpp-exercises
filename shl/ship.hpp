@@ -9,12 +9,17 @@ class Ship  {
     public:
         Ship();
         Ship(uint32_t id, std::string name, int speed, int maxCrew, float capacity)
-            : id_(id), name_(name), speed_(speed), maxCrew_(maxCrew), capacity_(capacity)
+            : id_(id)
+            , name_(name)
+            , speed_(speed)
+            , maxCrew_(maxCrew)
+            , capacity_(capacity)
             {}
         Ship(uint32_t id, int speed, int maxCrew)
             :Ship(id,"",speed,maxCrew,0)
             {}
         void setName(std::string name);
+        std::string getName();
         Ship& operator +=(const int);
         Ship& operator -=(const int);
         void load(std::shared_ptr<Cargo>);
