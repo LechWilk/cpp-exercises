@@ -25,7 +25,7 @@ class Ship  {
         void load(std::shared_ptr<Cargo>);
         void Ship::unload(Cargo* cargo);
     private:
-        uint32_t id_;
+        uint32_t id_ = -1;
         std::string name_;
         int speed_;
         int maxCrew_;
