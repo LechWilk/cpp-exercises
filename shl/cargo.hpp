@@ -16,6 +16,6 @@ class Cargo {
         Cargo& operator-=(const size_t);
     private:
         std::string name_;
-        int amount_;
+        size_t amount_;
         float basePrice_;
 };
