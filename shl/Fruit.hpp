@@ -14,14 +14,13 @@ class Fruit : public Cargo  {
 };
 
 class DryFruit : public Fruit{
-    public:
    public:
         DryFruit(int amount, std::string name, float basePrice, int timeToSpoil)
         :   Fruit(amount, name, basePrice, timeToSpoil), daysTenthsToSpoil_(0)
         {}
 
         size_t getPrice() const override;
-        DryFruit& operator--();
+        DryFruit& operator--() override;
     protected:
         int daysTenthsToSpoil_;
 
