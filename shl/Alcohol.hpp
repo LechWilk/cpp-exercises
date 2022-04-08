@@ -5,7 +5,7 @@ class Alcohol   :   public Cargo    {
         Alcohol(int amount, std::string name, float basePrice, int alcoPower)
         :   Cargo(amount, name, basePrice), alcoPower_(alcoPower)
         {}
-        virtual size_t getPrice() const = 0;
+        virtual size_t getPrice() const override;
     private:
         int alcoPower_;
 

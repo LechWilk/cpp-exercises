@@ -5,7 +5,7 @@ class Item:public Cargo {
         Item(int amount, std::string name, float basePrice, rarity occurance)
         :   Cargo(amount, name, basePrice), occurance_(occurance)
         {}
-        virtual size_t getPrice() const = 0;
+        virtual size_t getPrice() const override;
     private:
         rarity occurance_;
         

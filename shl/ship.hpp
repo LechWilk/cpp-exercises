@@ -22,8 +22,8 @@ class Ship  {
         std::string getName();
         Ship& operator +=(const int);
         Ship& operator -=(const int);
-        void load(std::shared_ptr<Cargo>);
-        void Ship::unload(Cargo* cargo);
+        void load(std::shared_ptr<Cargo> cargo);
+        void unload(Cargo* cargo);
     private:
         uint32_t id_ = -1;
         std::string name_;
